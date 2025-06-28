@@ -80,9 +80,16 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+
 }
 body.dark-mode #summary{
 	color: #1b94a1;
+}
+#toggleTheme{
+	background-color: #636568;
 }
 header{
 	background-color: #222;
