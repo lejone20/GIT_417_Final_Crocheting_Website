@@ -217,6 +217,19 @@ nav a:hover{
 #grandmother h3, #legacy h3{
 	border-bottom: 20px solid var(--teal);
 }
+#product-display img {
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+.product-controls button {
+  margin: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  background-color: #808282;
+  color: #060909;
+}
+
 .win {
 	background-color: #636568;
 	height: 200px;	

@@ -33,6 +33,72 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("total").textContent = total.toFixed(2);
   });
 });
+// Product data
+const products = {
+  cookie: {
+    name: 'Cookie Monster Hat',
+    img: 'Images/cookie_monster2_hat.jpg',
+    description: 'This hat is made with soft, acrylic yarn that can be washed in cold water and dried on low heat.',
+    price: '$55.00'
+  },
+  monkey: {
+    name: 'Monkey Hat & Diaper Cover',
+    img: 'Images/monkey_baby_set.jpg',
+    description: 'This set is made with wool yarn. Hand wash in cold water and air/tumble dry to avoid shrinkage.',
+    price: '$75.00'
+  },
+  hello_kitty: {
+    name: 'Hello Kitty Hat and Purse',
+    img: 'Images/hello_kitty_hat_purse.jpg',
+    description: 'This hat, purse, and scarf are made with soft, acrylic yarn. Available in pink, purple, yellow, and blue.',
+    price: '$95.00'
+  },
+  preemie_hat: {
+    name: 'Preemie Hat with bow',
+    img: 'Images/premie_hat_bow.jpg',
+    description: 'This hat is seen on a micro-preemie at about 3 lbs.  It can be made for any size child and is available in any color at your request.  It is made with soft acrylic variegated yarn on the main part of the hat with a matching color for edging',
+    price: '$25.00'
+  },
+  dress: {
+    name: 'Micro-Preemie Dress & Hat',
+    img: 'Images/premie_dress_headband.jpg',
+    description: 'This set can be modified to fit any tiny preemie or newborn.  It is made with soft, acrylic baby yarn.  When ordering this item, I will need the length and weight of your child to accurately make the dress.  The headband is adjustable.  The headband has optional beads that are crocheted into the item and not sewn on so they will not fall off.',
+    price: '$55.00'
+  },
+  owls: {
+    name: 'Owl Hat',
+    img: 'Images/owl_hat_set.jpg',
+    description: 'The Owl hat can be sized from preemie to adult.  It is made with soft, acrylic yarn.  When ordering this item, please specify desired colors and if you would like an awake owl (as pictured) or a baby sleeping owl.  Price is for one hat.',
+    price: '$25.00' 
+  }
+};
+
+// Function to display a product
+function displayProduct(key) {
+  const product = products[key];
+  const container = document.getElementById('product-display');
+  container.innerHTML = `
+    <section>
+      <img src="${product.img}" alt="${product.name}">
+      <h3>${product.name}</h3>
+      <p>${product.description}</p>
+      <p>${product.price}</p>
+    </section>
+  `;
+}
+
+// Set event listeners on buttons
+document.querySelectorAll('.product-controls button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const productKey = btn.getAttribute('data-product');
+    displayProduct(productKey);
+  });
+});
+
+// Display default product on load
+window.addEventListener('DOMContentLoaded', () => {
+  displayProduct('cookie');
+});
 
 //DOM for game play
 const correctNumber = Math.floor(Math.random() * 10) + 1;

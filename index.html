@@ -49,81 +49,20 @@
                     <h2>Custom items available</h2>
                     <p>Each item can be custom created with a color of your choice when creating an item of clothing.  We occasionally request measurements of your child in order to ensure items fit correctly.</p>
                 </section>
-            <div class="items">
-                
-                    <section id="cookie">
-                        <img src="Images/cookie_monster2_hat.jpg" alt="Cookie Monster hat">
-                        <h3>Cookie Monster hat</h3>
-                            <p>This hat is made with soft, acrylic yarn that can be washed in cold water and dried on low heat.</p>
-                            <p>$55.00</p>
-                             <label>
-                                Qty:
-                                <input type="number" min="0" value="0" class="qty" data-price="55">
-                            </label>
-                    </section>
-                    <section id="monkey">
-                        <img src="Images/monkey_baby_set.jpg" alt="Monkey Hat and Diaper Cover">
-                        <h3>Monkey Hat & Diaper Cover.</h3>
-                            <p>This set is made with wool yarn.  It should be hand washed in cold water and left to air/tumble dry.  Heating this product will result in shrinking.</p>
-                            <p>$75.00</p>
-                             <label>
-                                Qty:
-                                <input type="number" min="0" value="0" class="qty" data-price="75">
-                            </label>
-                    </section>
-                    <section id="Hello_kitty">
-                        <img src="Images/hello_kitty_hat_purse.jpg" alt="Hello Kitty">
-                        <h3>Hello Kitty Hat and purse</h3>
-                            <p>This hat, purse and scarf are made with soft, acrylic yarn.  Available colors are pink, purple, yellow and blue.</p>
-                            <p>$95.00</p>
-                             <label>
-                                Qty:
-                                <input type="number" min="0" value="0" class="qty" data-price="95">
-                            </label>
-                    </section>
-                    <section id="preemie_hat">
-                        <img src="Images/premie_hat_bow.jpg" alt="Preemie hat and bow">
-                        <h3>Preemie Hat with bow</h3>
-                            <p>This hat is seen on a micro-preemie at about 3 lbs.  It can be made for any size child and is available in any color at your request.  It is made with soft acrylic variegated yarn on the main part of the hat with a matching color for edging.</p>
-                            <p>$25.00</p>
-                            <label>
-                                Qty:
-                                <input type="number" min="0" value="0" class="qty" data-price="25">
-                            </label>
-                    </section>
-                    <section id="dress">
-                        <img src="Images/premie_dress_headband.jpg" alt="Preemie Dress & Hat">
-                        <h3>Micro-Preemie Dress & hat</h3>
-                            <p>This set was modified to fit a tiny preemie at just under 4 lbs.  It is made with soft, acrylic baby yarn.  When ordering this item, I will need your child's length and weight to accurately make the dress.  The headband is adjustable.  The headband has optional beads that are crocheted into the item and not sewn on so they will not fall off.</p>
-                            <p>$55.00</p>
-                             <label>
-                                Qty:
-                                <input type="number" min="0" value="0" class="qty" data-price="55">
-                            </label>
-                        </section>
-                    <section id="owls">
-                        <img src="Images/owl_hat_set.jpg" alt="Owl Hat Set">
-                        <h3>Owl hat set</h3>
-                            <p>The Owl hat can be sized from preemie to adult.  It is made with soft, acrylic yarn.  When ordering this item, please specify desired colors and if you would like an awake owl (as pictured) or a baby sleeping owl.  Price is for one hat.</p>
-                            <p>$35.00</p>
-                             <label>
-                                Qty:
-                                <input type="number" min="0" value="0" class="qty" data-price="35">
-                            </label>
-                        </section>
-
+            <div class="product-controls">
+                <button data-product="cookie">Cookie Monster</button>
+                <button data-product="monkey">Monkey Set</button>
+                <button data-product="hello_kitty">Hello Kitty</button>
+                <button data-product="preemie_hat">Preemie Hat with bow</button>
+                <button data-product="dress">Micro-Preemie Dress & hat</button>
+                <button data-product="owls">Owl Hat</button>
             </div>
-                    <div id="summary">
-                    <h2>Order Summary</h2>
-                    <p>Subtotal: $<span id="subtotal">0.00</span></p>
-                    <p>Tax (8%): $<span id="tax">0.00</span></p>
-                    <p>Shipping: $<span id="shipping">25.00</span></p>
-                    <hr>
-                    <p><strong>Total: $<span id="total">25.00</span></strong></p>
-                    <button id="calculate">Calculate Total</button>
-                    <p>**All orders are shipped priority mail with tracking</p>
 
-            </div>
+<div id="product-display">
+  <!-- Product content will be inserted here by JavaScript -->
+</div>
+
+
             <div class="win">
                 <h3>Guess the correct number and win a keychain with your order</h3>
                 <section id="Game">                    
