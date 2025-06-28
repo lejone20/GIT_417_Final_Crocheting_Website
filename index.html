@@ -139,41 +139,43 @@
                 <h2>Please fill out the following with each order</h2>
                 <p>Please include your child's current size of clothing in the comments, if ordering a hat please include child's head circumference for best fit.</p>
             <form action="https://wp.zybooks.com/form-viewer.php" method="POST" target="_blank">
-			<label for="my-name">Name*</label>	
-			<input type="text" name="my-name" id="my-name" required>
+			<label for="fname">Full Name*</label>	
+			<input type="text" name="fname" id="fname" required placeholder="Please enter full name">
 			
-			<label for="my-address">Address</label>
-			<input type="text" name="my-address" id="my-address">				   
+			<label for="address">Address</label>
+			<input type="text" name="address" id="address" placeholder="Address">				   
 										   		
-			<label for="my-city">City</label>
-			<input type="text" name="my-city" id="my-city">
+			<label for="city">City</label>
+			<input type="text" name="city" id="city" placeholder="City">
 				   
-			<label for="my-state">State</label>
-            <input type="text" name="my-state" id="my-state">
-							
-			<label for="my-zip">Zipcode</label>
-			<input type="number" name="my-zip" id="my-zip">
+			<label for="state">State</label>
+            <input type="text" name="state" id="state" placeholder="State">
 
-			<label for="my-phone">Phone</label>
-			<input type="tel" name="my-phone" id="my-phone">
+            <label for="zipCode">ZipCode</label>
+			<input type="text" id="zipCode" maxlength="5" placeholder="Enter ZIP code">				
+		
 
-			<label for="my-email">Email*</label> 
-			<input type="email" name="my-email" id="my-email" required>	 
+			<label for="phone">Phone</label>
+			<input type="tel" name="phone" id="phone" required placeholder="Enter Phone number">
+
+			<label for="email">Email*</label> 
+			<input type="email" name="email" id="email" required placeholder="Enter Email">	 
 
             <fieldset>
 				<legend>Preferred Method of Contact</legend>
 
-				<input type="radio" name="contact-pref" id="pref-email" checked>	   
-				<label for="pref-email">Email</label>
+				<input type="radio" name="pref-contact" id="email-pref" checked>	   
+				<label for="email">Email</label>
 
-				<input type="radio" name="contact-pref" id="pref-phone">
-				<label for="pref-phone">Phone</label>
+				<input type="radio" name="pref-contact" id="phone-pref">
+				<label for="phone-pref">Phone</label>
 
 			</fieldset>						   
-				<label for="my-comments">Comments</label>
-				<textarea name="my-comments" id="my-comments"></textarea>
+				<label for="comments">Comments*</label>
+				<textarea name="comments" id="comments" required placeholder="Enter your child's current size, height and weight.  Please include any special questions or requests."></textarea>
 
 				<input type="submit" name="my-submit" id="my-submit" value="Submit Form">
+            <p>* indicates a required field</p>
 			
 		</form>
 	</section>
