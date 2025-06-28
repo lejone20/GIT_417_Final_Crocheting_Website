@@ -69,6 +69,7 @@ table {
     --box-shadow-sm: -3px 3px 7px var(--med-gray);
     --box-shadow-lg: -6px 6px 10px var(--med-gray);
     --filter-shadow: drop-shadow(-6px 6px 10px var(--med-gray));
+
 }
 
 body.dark-mode {
@@ -93,7 +94,11 @@ main{
 h1{
 	font-size: 60pt;
 	text-align: center;
+	font-family: 'Dancing Script', cursive;
+	letter-spacing: 2px;
 }
+
+
 h2{
 	font-size: 30pt;
 	text-align: center;
@@ -117,11 +122,7 @@ header h2{
 header h3{
 	border-bottom: 30px solid #222;
 }
-#Products p{
-	font-size: 20 px;
-	text-align: center;
-	border-top: 10 px solid #1b94a1;
-}
+
 #grandmother,
 #legacy {
   display: flex;
