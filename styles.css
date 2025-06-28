@@ -234,6 +234,9 @@ form{
 	color: var(--dk-gray);
 	border-radius: 3px;
 }
+#Contact p{
+	border: 10px solid var(--teal);
+}
 input, label, select, textarea{
 	display: block;
 	width: 90%;

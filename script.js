@@ -67,6 +67,66 @@ document.addEventListener("DOMContentLoaded", function () {
      location.reload();
   });
 });
+document.querySelector('form').addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent default form submission
+
+  const errors = {}; // Store errors here
+
+  // Grab input values
+  const name = document.getElementById('fname').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const comments = document.getElementById('comments').value.trim();
+  const zipCode = document.getElementById('zipCode').value.trim();
+  const contactPrefEmail = document.getElementById('email-pref').checked;
+  const contactPrefPhone = document.getElementById('phone-pref').checked;
+
+  // Clear previous errors
+  document.querySelectorAll('.error').forEach(e => e.remove());
+
+  // RegEx patterns
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phonePattern = /^\d{10}$/;
+  const zipPattern = /^\d{5}$/;
+
+  // Validations
+  if (!name) errors.fname = 'Full name is required.';
+  if (!comments) errors.comments = 'Comments are required.';
+  if (!zipPattern.test(zipCode)) errors.zipCode = 'ZIP Code must be exactly 5 digits.';
+  if (contactPrefEmail && !emailPattern.test(email)) errors.email = 'Please enter a valid email address.';
+  if (contactPrefPhone && !phonePattern.test(phone)) errors.phone = 'Phone must be exactly 10 digits.';
+
+  // Show errors
+  Object.entries(errors).forEach(([field, message]) => {
+    const fieldElement = document.getElementById(field);
+    const errorTag = document.createElement('span');
+    errorTag.className = 'error';
+    errorTag.style.color = 'red';
+    errorTag.textContent = message;
+    fieldElement.insertAdjacentElement('afterend', errorTag);
+  });
+
+  // If errors exist, don't continue
+  if (Object.keys(errors).length > 0) return;
+
+  // If everything's valid, create customer object
+  const customer = {
+    name,
+    email,
+    phone,
+    zipCode,
+    comments,
+    preferredContact: contactPrefEmail ? 'Email' : 'Phone'
+  };
+
+  // Reset form and show thank-you message
+  this.reset();
+  const thankYou = document.createElement('p');
+  thankYou.style.color = 'white';
+  thankYou.innerHTML = `Thank you for your request, <strong>${customer.name}</strong>! We’ll contact you via <strong>${customer.preferredContact}</strong>.`;
+  this.insertAdjacentElement('beforebegin', thankYou);
+});
+
 
 
 
